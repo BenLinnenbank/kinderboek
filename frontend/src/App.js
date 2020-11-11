@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { PageRouter } from './components/routers/PageRouter';
+import { AppRouter } from './components/routers/AppRouter';
 
 function App() {
   return (
-    <PageRouter />
+    <AppRouter />
   );
 }
 
