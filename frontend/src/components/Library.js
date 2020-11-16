@@ -2,6 +2,10 @@ import React from 'react';
 import Menu from './Menu';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import boek1 from '../assets/bookCovers/Boek1.svg';
+import boek2 from '../assets/bookCovers/Boek2.svg';
+import boek3 from '../assets/bookCovers/Boek3.svg';
+import boek4 from '../assets/bookCovers/Boek4.svg';
 
 const StyledGrid = styled.div`
     width: 80%;
@@ -13,8 +17,9 @@ const StyledGrid = styled.div`
     row-gap: 24px;
 `;
 
-const StyledLink = styled(Link)`
-    background-color: lightgrey;
+const StyledImg = styled.img`
+    width: 240px;
+    heigth: 240px;
 `;
 
 function Library() {
@@ -22,10 +27,10 @@ function Library() {
         <>
             <Menu />
             <StyledGrid>
-                <StyledLink to="/book1">book1</StyledLink>
-                <StyledLink to="/book2">book2</StyledLink>
-                <StyledLink to="/book3">book3</StyledLink>
-                <StyledLink to="/book4">book4</StyledLink>
+                <Link to="/book1"><StyledImg src={boek1} /></Link>
+                <Link to="/book2"><StyledImg src={boek2} /></Link>
+                <Link to="/book3"><StyledImg src={boek3} /></Link>
+                <Link to="/book4"><StyledImg src={boek4} /></Link>
             </StyledGrid>
         </>
     )
