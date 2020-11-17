@@ -8,13 +8,15 @@ import boek3 from '../assets/bookCovers/Boek3.svg';
 import boek4 from '../assets/bookCovers/Boek4.svg';
 
 const StyledGrid = styled.div`
-    width: 80%;
+    width: 53%;
     margin-top: 80px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 240px 240px;
+    grid-template-rows: 240px 240px;
     column-gap: 24px;
     row-gap: 24px;
+    margin: auto;
+    margin-bottom: 20px;
 `;
 
 const StyledImg = styled.img`
