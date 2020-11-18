@@ -8,7 +8,7 @@ import boek3 from '../assets/bookCovers/Boek3.svg';
 import boek4 from '../assets/bookCovers/Boek4.svg';
 
 const StyledGrid = styled.div`
-    width: 53%;
+    width: 100%;
     margin-top: 80px;
     display: grid;
     grid-template-columns: 240px 240px;
@@ -17,6 +17,7 @@ const StyledGrid = styled.div`
     row-gap: 24px;
     margin: auto;
     margin-bottom: 20px;
+    justify-content: center;
 `;
 
 const StyledImg = styled.img`
