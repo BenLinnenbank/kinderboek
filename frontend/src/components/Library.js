@@ -28,7 +28,7 @@ const StyledImg = styled.img`
 function Library() {
     return (
         <>
-            <Menu />
+            <Menu btn={true} />
             <StyledGrid>
                 <Link to="/book1"><StyledImg src={boek1} /></Link>
                 <Link to="/book2"><StyledImg src={boek2} /></Link>
