@@ -12,8 +12,8 @@ const StyledMenu = styled.menu`
     justify-content: space-between;
     max-width: 100%;
     heigth: 80px;
-    padding: 20px;
-    margin-top: 0;
+    padding: 12px;
+    margin: 0px;
 `;
 const StyledContentMenu = styled.menu`
     display: flex;

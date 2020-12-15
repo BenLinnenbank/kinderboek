@@ -7,6 +7,8 @@ function MenuButton(props) {
 
     const StyledMenuButton = styled.button`
         background-color: ${props.color};
+        display: flex;
+        align-items: center;
         padding: 8px 20px;
         margin-left: 24px;
         border: 0px;

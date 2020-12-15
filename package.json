@@ -2,7 +2,7 @@
   "name": "kinderboek",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/BenLinnenbank/kinderboek#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "pg": "^8.5.1"
   }
 }
