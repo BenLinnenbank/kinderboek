@@ -31,12 +31,6 @@ function Library() {
     return (
         <>
             <Menu btn={true} />
-            <StyledCarousel>
-                <Link to="/book1"><StyledImg src={boek1} /></Link>
-                <Link to="/book2"><StyledImg src={boek2} /></Link>
-                <Link to="/book3"><StyledImg src={boek3} /></Link>
-                <Link to="/book4"><StyledImg src={boek4} /></Link>
-            </StyledCarousel>
             <ContentCarousel
                 book1={boek1}
                 book2={boek2}
@@ -48,3 +42,10 @@ function Library() {
 }
 
 export default Library
+
+// <StyledCarousel>
+//                 <Link to="/book1"><StyledImg src={boek1} /></Link>
+//                 <Link to="/book2"><StyledImg src={boek2} /></Link>
+//                 <Link to="/book3"><StyledImg src={boek3} /></Link>
+//                 <Link to="/book4"><StyledImg src={boek4} /></Link>
+//             </StyledCarousel>

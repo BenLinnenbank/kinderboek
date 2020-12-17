@@ -11,7 +11,7 @@ import Story from '../Story';
 import Library from '../Library';
 import Login from '../Login';
 
-export function AppRouter() {
+function AppRouter() {
     return (
         <div>
             <Switch>
@@ -40,3 +40,5 @@ export function AppRouter() {
         </div>
     );
 }
+
+export default AppRouter
