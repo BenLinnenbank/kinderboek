@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from './Menu';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import ContentCarousel from './reusable_components/carousel/ContentCarousel';
+import ContentCarousel from './reusable_components/carousel/ContentCarouselF';
 import boek1 from '../assets/bookCovers/Boek1.svg';
 import boek2 from '../assets/bookCovers/Boek2.svg';
 import boek3 from '../assets/bookCovers/Boek3.svg';
