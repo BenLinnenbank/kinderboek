@@ -1,12 +1,22 @@
-const mockData = require('./database/dataObject.js');
 const express = require('express');
-const app = express()
-const port = 3000
+const connectDB = require('./config/db');
+const users = require('./routes/user');
+const profiles = require('./routes/userProfile');
+const preferences = require('./routes/userPreferences');
+const books = require('./routes/book');
 
-app.get('/', (req, res) => {
-    res.send(mockData)
-})
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+const app = express();
+connectDB();
+
+app.use(express.json({ extended: false }));
+
+const PORT = process.env.PORT || 5000;
+
+app.use('/user', users);
+app.use('/profile', profiles);
+app.use('/preferences', preferences);
+app.use('/books', books);
+
+
+app.listen(PORT, () => `Server started on port ${PORT}`);
