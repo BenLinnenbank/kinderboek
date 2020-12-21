@@ -33,11 +33,11 @@ function ContentCarousel(props) {
                 className={'carousel'}
                 options={flickityOptions}
             >
-                {props.books.map((book, index) => {
+                {props.books.map((book) => {
                     return (
                         <div className="carousel-cell">
-                            <Link to={`/book${index + 1}`}>
-                                <StyledImg src={book} />
+                            <Link to={`/${book.route}`}>
+                                <StyledImg src={book.svg} />
                             </Link>
                             <p className="legend">book</p>
                         </div>
