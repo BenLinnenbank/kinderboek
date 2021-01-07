@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { login } from '../0-actions/index';
 
 const StyledForm = styled.form`
     display: flex;
@@ -33,8 +35,9 @@ const StyledH1 = styled.h1`
     
 `;
 
-function Login() {
+const Login = () => {
 
+    const dispatch = useDispatch()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -57,14 +60,15 @@ function Login() {
                 </StyledUl>
             </StyledForm>
         </>
-    )
+    );
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(email);
-        console.log(password);
-        window.location = "http://localhost:3000/library";
-    }
-
-}
+        const user = {
+            email: email,
+            password: password
+        };
+        dispatch(login(user));
+    };
+};
 
 export default Login

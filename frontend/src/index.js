@@ -6,15 +6,26 @@ import { ThemeProvider } from 'styled-components';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 import theme from './theme.js';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import allReducers from './0-reducers/index';
+
+
+const store = createStore(allReducers, {},
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <Router>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </Router>
-  </ThemeProvider>,
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </Router>
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root')
 );
 

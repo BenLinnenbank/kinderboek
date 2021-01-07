@@ -33,7 +33,7 @@ function AppRouter() {
                 <Route path="/library">
                     <Library />
                 </Route>
-                <Route path="/">
+                <Route exact path="/">
                     <Login />
                 </Route>
             </Switch>
