@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { login } from '../0-actions/index';
+import { useHistory } from 'react-router-dom';
 
 const StyledForm = styled.form`
     display: flex;
@@ -37,7 +38,13 @@ const StyledH1 = styled.h1`
 
 const Login = () => {
 
+    const DBUser = {
+        email: 'ron@gmail.com',
+        password: 'wachtwoord',
+    }
+
     const dispatch = useDispatch()
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -48,11 +55,11 @@ const Login = () => {
                 <StyledUl>
                     <li>
                         <StyledLabel>Email</StyledLabel>
-                        <StyledInput type="email" value={email} onChange={e => setEmail(e.target.value)} name="field1" className="field-long" />
+                        <StyledInput type="email" required value={email} onChange={e => setEmail(e.target.value)} name="field1" className="field-long" />
                     </li>
                     <li>
                         <StyledLabel>Password</StyledLabel>
-                        <StyledInput type="text" value={password} onChange={e => setPassword(e.target.value)} name="field2" placeholder="Password" />
+                        <StyledInput type="text" required value={password} onChange={e => setPassword(e.target.value)} name="field2" placeholder="Password" />
                     </li>
                     <li>
                         <StyledInput className="login-button" type="submit" value="Submit" />
@@ -63,11 +70,14 @@ const Login = () => {
     );
     function handleSubmit(e) {
         e.preventDefault();
-        const user = {
-            email: email,
-            password: password
-        };
-        dispatch(login(user));
+        if (email === DBUser.email && password === DBUser.password) {
+            const user = {
+                email: email,
+                password: password,
+                loggedIn: true
+            };
+            dispatch(login(user));
+        } else alert('Foute credentials');
     };
 };
 
