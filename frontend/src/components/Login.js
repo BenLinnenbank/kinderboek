@@ -76,6 +76,13 @@ const Login = () => {
                 password: password,
                 loggedIn: true
             };
+            // const result = await fetch('/user/newuser', {
+            //     method: 'POST',
+            //     body: JSON.stringify({
+            //         email: email,
+            //         password: password,
+            //     })
+            // });
             dispatch(login(user));
         } else alert('Foute credentials');
     };

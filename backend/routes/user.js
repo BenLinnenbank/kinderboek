@@ -31,6 +31,7 @@ router.post('/newuser', async (req, res) => {
         let user = await User.find({ email: email }).exec();
         if (user) return res.status(409).json({ message: 'user already exists' });
         user = await User.create({ email, password })
+        console.log(user);
         res.json(user);
     } catch (err) {
         console.log(err.message);
