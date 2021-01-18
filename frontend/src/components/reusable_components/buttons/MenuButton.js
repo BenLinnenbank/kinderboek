@@ -3,10 +3,8 @@ import styled from 'styled-components';
 import ButtonText from '../text/ButtonText';
 import MenuIcon from '../icons/MenuIcon';
 
-function MenuButton(props) {
-
-    const StyledMenuButton = styled.button`
-        background-color: ${props.color};
+const StyledMenuButton = styled.button`
+        background-color: ${props => props.color};
         display: flex;
         align-items: center;
         padding: 8px 20px;
@@ -16,11 +14,13 @@ function MenuButton(props) {
         height: 40px;
         border-radius: 25px;
     `;
+
+function MenuButton(props) {
     return (
-        <StyledMenuButton>
+        <StyledMenuButton color={props.color}>
             <MenuIcon icon={props.icon} />
             <ButtonText text={props.text} />
-        </ StyledMenuButton>
+        </StyledMenuButton>
     );
 }
 

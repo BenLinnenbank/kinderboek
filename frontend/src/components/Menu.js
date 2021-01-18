@@ -11,7 +11,7 @@ const StyledMenu = styled.menu`
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    heigth: 80px;
+    height: 80px;
     padding: 12px;
     margin: 0px;
 `;
@@ -32,7 +32,7 @@ function Menu(props) {
             ?
             <StyledMenu>
                 <StyledContentMenu>
-                    <img src={logo} />
+                    <img src={logo} alt="Company logo" />
                     <MenuButton color={"#E9DFD1"} text="2 - 4 jaar" icon={young} />
                     <MenuButton color={"#DFEACF"} text="4 - 6 jaar" icon={middle} />
                     <MenuButton color={"#D7DAEE"} text="6 - 8 jaar" icon={old} />
@@ -42,7 +42,7 @@ function Menu(props) {
                 </StyledSettingsMenu>
             </StyledMenu>
             : <StyledContentMenu>
-                <img src={logo} />
+                <img src={logo} alt="Company logo" />
                 <h1>menu</h1>
                 <StyledSettingsMenu>
                     <ProfileButton />
@@ -50,6 +50,5 @@ function Menu(props) {
             </StyledContentMenu>
     );
 }
-
 
 export default Menu

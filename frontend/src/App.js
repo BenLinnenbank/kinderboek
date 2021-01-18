@@ -19,7 +19,7 @@ function App() {
             history.push('/library')
           )}
       </AppRouter>
-    </AppContainer >
+    </AppContainer>
   );
 }
 

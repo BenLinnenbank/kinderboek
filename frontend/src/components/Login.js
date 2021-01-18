@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { login } from '../0-actions/index';
-import { useHistory } from 'react-router-dom';
 
 const StyledForm = styled.form`
     display: flex;
@@ -36,6 +35,7 @@ const StyledH1 = styled.h1`
     
 `;
 
+
 const Login = () => {
 
     const DBUser = {
@@ -47,6 +47,25 @@ const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        if (email === DBUser.email && password === DBUser.password) {
+            const user = {
+                email: email,
+                password: password,
+                loggedIn: true
+            };
+            // const result = await fetch('/user/newuser', {
+            //     method: 'POST',
+            //     body: JSON.stringify({
+            //         email: email,
+            //         password: password,
+            //     })
+            // });
+            dispatch(login(user));
+        } else alert('Foute credentials');
+    };
 
     return (
         <>
@@ -68,24 +87,6 @@ const Login = () => {
             </StyledForm>
         </>
     );
-    function handleSubmit(e) {
-        e.preventDefault();
-        if (email === DBUser.email && password === DBUser.password) {
-            const user = {
-                email: email,
-                password: password,
-                loggedIn: true
-            };
-            // const result = await fetch('/user/newuser', {
-            //     method: 'POST',
-            //     body: JSON.stringify({
-            //         email: email,
-            //         password: password,
-            //     })
-            // });
-            dispatch(login(user));
-        } else alert('Foute credentials');
-    };
 };
 
 export default Login
