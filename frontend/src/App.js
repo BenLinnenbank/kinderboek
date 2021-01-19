@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import AppRouter from './components/routers/AppRouter';
 import AppContainer from './components/AppContainer';
@@ -10,15 +10,17 @@ function App() {
   const isUserLoggedIn = useSelector(state => state.loggedInUser.loggedIn);
   console.log('This is the user: ', isUserLoggedIn);
 
+  useEffect(() => {
+    if (isUserLoggedIn) {
+      history.push('/library')
+    } else {
+      history.push('/')
+    }
+  }, [isUserLoggedIn, history]);
+
   return (
     <AppContainer>
-      <AppRouter>
-        {!isUserLoggedIn ? (
-          history.push('/')
-        ) : (
-            history.push('/library')
-          )}
-      </AppRouter>
+      <AppRouter />
     </AppContainer>
   );
 }

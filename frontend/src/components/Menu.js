@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import MenuButton from './reusable_components/buttons/MenuButton';
 import young from '../assets/images/young.svg';
 import middle from '../assets/images/middle.svg';
@@ -26,16 +26,17 @@ const StyledSettingsMenu = styled.menu`
 
 
 function Menu(props) {
-
+    const themeContext = useContext(ThemeContext);
+    console.log(themeContext)
     return (
         (props.btn)
             ?
             <StyledMenu>
                 <StyledContentMenu>
                     <img src={logo} alt="Company logo" />
-                    <MenuButton color={"#E9DFD1"} text="2 - 4 jaar" icon={young} />
-                    <MenuButton color={"#DFEACF"} text="4 - 6 jaar" icon={middle} />
-                    <MenuButton color={"#D7DAEE"} text="6 - 8 jaar" icon={old} />
+                    <MenuButton color={themeContext.colors.age.young} text="2 - 4 jaar" icon={young} />
+                    <MenuButton color={themeContext.colors.age.middle} text="4 - 6 jaar" icon={middle} />
+                    <MenuButton color={themeContext.colors.age.old} text="6 - 8 jaar" icon={old} />
                 </StyledContentMenu>
                 <StyledSettingsMenu>
                     <ProfileButton />

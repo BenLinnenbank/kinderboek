@@ -13,7 +13,6 @@ const StyledImg = styled.img`
 
 const StyledContainer = styled.div`
     width: 85%;
-    /* height: 240px; */
     padding: 40px;
 `;
 

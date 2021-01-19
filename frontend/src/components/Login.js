@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { login } from '../0-actions/index';
 
+
 const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
@@ -48,7 +49,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function handleSubmit(e) {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (email === DBUser.email && password === DBUser.password) {
             const user = {
