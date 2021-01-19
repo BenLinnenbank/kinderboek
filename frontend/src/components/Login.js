@@ -44,7 +44,7 @@ const Login = () => {
         password: 'wachtwoord',
     }
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

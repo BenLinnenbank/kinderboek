@@ -4,3 +4,9 @@ export const login = (user) => {
         payload: user
     };
 }
+
+export const toggleTheme = () => {
+    return {
+        type: 'TOGGLE_THEME',
+    }
+}

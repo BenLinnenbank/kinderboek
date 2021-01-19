@@ -2,29 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { ThemeProvider } from 'styled-components';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
-import theme from './theme.js';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import allReducers from './0-reducers/index';
+import ThemeContainer from './components/ThemeContainer.js';
 
 
 const store = createStore(allReducers, {},
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-
 ReactDOM.render(
   <Provider store={store}>
-    <ThemeProvider theme={theme}>
+    <ThemeContainer >
       <Router>
         <React.StrictMode>
           <App />
         </React.StrictMode>
       </Router>
-    </ThemeProvider>
+    </ThemeContainer>
   </Provider>,
   document.getElementById('root')
 );

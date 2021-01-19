@@ -6,6 +6,9 @@ import middle from '../assets/images/middle.svg';
 import old from '../assets/images/old.svg';
 import logo from '../assets/images/logo.svg';
 import ProfileButton from './reusable_components/buttons/ProfileButton';
+import { useDispatch } from 'react-redux';
+import { toggleTheme } from '../0-actions/index.js'
+
 
 const StyledMenu = styled.menu`
     display: flex;
@@ -25,9 +28,11 @@ const StyledSettingsMenu = styled.menu`
 `;
 
 
-function Menu(props) {
+const Menu = (props) => {
+
+    const dispatch = useDispatch()
     const themeContext = useContext(ThemeContext);
-    console.log(themeContext)
+
     return (
         (props.btn)
             ?
@@ -39,6 +44,7 @@ function Menu(props) {
                     <MenuButton color={themeContext.colors.age.old} text="6 - 8 jaar" icon={old} />
                 </StyledContentMenu>
                 <StyledSettingsMenu>
+                    <button onClick={() => dispatch(toggleTheme())}>toggle theme</button>
                     <ProfileButton />
                 </StyledSettingsMenu>
             </StyledMenu>
