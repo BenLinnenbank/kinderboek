@@ -5,7 +5,7 @@ const StyledButtonText = styled.span`
         font-size: 1.1em;
         margin: 0 auto;
         text-align: center;
-        color: ${props => props.theme.colors.text.primary}
+        color: ${props => props.theme.colors.text.button}
     `;
 
 function ButtonText(props) {

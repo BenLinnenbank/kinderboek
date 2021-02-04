@@ -18,7 +18,7 @@ router.get('/users', async (req, res) => {
     try {
         const users = await User.find().exec();
         if (!users) return res.status(404).json({ message: 'DB is empty' });
-        res.json(users);
+        res.status(200).json(users);
     } catch (err) {
         console.log(err.message);
         res.status(500).send('Internal server error');
@@ -29,8 +29,8 @@ router.post('/newuser', async (req, res) => {
     const { email, password } = req.body;
     try {
         let user = await User.find({ email: email }).exec();
-        if (user) return res.status(409).json({ message: 'user already exists' });
-        user = await User.create({ email, password })
+        // if (user) return res.status(409).json({ message: 'user already exists' });
+        user = await User.create({ email, password });
         console.log(user);
         res.json(user);
     } catch (err) {

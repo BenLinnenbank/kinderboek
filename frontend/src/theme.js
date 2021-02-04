@@ -10,6 +10,7 @@ export const lightTheme = {
             primary: '#352F2F',
             secondary: '#3C78D8',
             tertiary: '#A3A6B4',
+            button: '#352F2F',
         },
         age: {
             young: '#E9DFD1',
@@ -27,15 +28,16 @@ export const lightTheme = {
 export const darkTheme = {
     colors: {
         background: {
-            primary: 'black',
+            primary: '#2E2E2E',
             secondary: '#3F3F3F',
             tertiary: '#A3A0FB',
             quartary: '#E9E9F0',
         },
         text: {
-            primary: 'white',
+            primary: '#CDCDCD',
             secondary: '#3C78D8',
             tertiary: '#A3A6B4',
+            button: '#352F2F',
         },
         age: {
             young: '#E9DFD1',

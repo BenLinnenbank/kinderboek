@@ -16,6 +16,16 @@ const StyledContainer = styled.div`
     padding: 40px;
 `;
 
+const StyledH2 = styled.h2`
+    margin-botton: 16px;
+    color: ${props => props.theme.colors.text.primary};
+`;
+
+const StyledH3 = styled.h3`
+    margin-top: 5px;
+    color: ${props => props.theme.colors.text.primary};
+`;
+
 function ContentCarousel(props) {
     const flickityOptions = {
         wrapAround: true,
@@ -27,7 +37,7 @@ function ContentCarousel(props) {
 
     return (
         <StyledContainer>
-            <h2>{props.title}</h2>
+            <StyledH2>{props.title}</StyledH2>
             <Flickity
                 className={'carousel'}
                 options={flickityOptions}
@@ -38,7 +48,7 @@ function ContentCarousel(props) {
                             <Link to={`/${book.route}`}>
                                 <StyledImg src={book.svg} />
                             </Link>
-                            <p className="legend">book</p>
+                            <StyledH3 className="legend">{book.title}</StyledH3>
                         </div>
                     );
                 })}

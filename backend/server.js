@@ -18,4 +18,4 @@ app.use('/preferences', preferences);
 app.use('/books', books);
 
 
-app.listen(PORT, () => `Server started on port ${PORT}`);
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

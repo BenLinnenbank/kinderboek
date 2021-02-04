@@ -1,7 +1,7 @@
-import book1 from './Boek1.svg';
-import book2 from './Boek2.svg';
-import book3 from './Boek3.svg';
-import book4 from './Boek4.svg';
+import book1 from './bookCoverSvg/Boek1.svg';
+import book2 from './bookCoverSvg/Boek2.svg';
+import book3 from './bookCoverSvg/Boek3.svg';
+import book4 from './bookCoverSvg/Boek4.svg';
 
 export const bookCovers = [
     {
@@ -11,19 +11,19 @@ export const bookCovers = [
         route: "book1"
     },
     {
-        title: "Jin en Jop",
+        title: "Jip en Jop",
         svg: book2,
         description: "Boekje over winterdepressies",
         route: "book2"
     },
     {
-        title: "Beer is sip",
+        title: "Op avontuur",
         svg: book3,
         description: "Boekje over winterdepressies",
         route: "book3"
     },
     {
-        title: "Beer is sip",
+        title: "Wilde westen",
         svg: book4,
         description: "Boekje over winterdepressies",
         route: "book4"
