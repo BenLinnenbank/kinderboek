@@ -6,9 +6,9 @@ import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 
 function App() {
+
   let history = useHistory()
   const isUserLoggedIn = useSelector(state => state.loggedInUser.loggedIn);
-  console.log('This is the user: ', isUserLoggedIn);
 
   useEffect(() => {
     if (isUserLoggedIn) {

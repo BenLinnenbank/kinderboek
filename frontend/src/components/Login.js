@@ -39,31 +39,29 @@ const StyledH1 = styled.h1`
 
 const Login = () => {
 
-    const DBUser = {
-        email: 'ron@gmail.com',
-        password: 'wachtwoord',
-    }
-
     const dispatch = useDispatch();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (email === DBUser.email && password === DBUser.password) {
+        console.log(email, password);
+        const result = await fetch('/api/user/login', {
+            method: 'POST',
+            body: JSON.stringify({
+                email: email,
+                password: password,
+            })
+        });
+        const resultJson = await result.json();
+        console.log('this is the result: ', resultJson);
+        if (resultJson.email) {
             const user = {
                 email: email,
                 password: password,
                 loggedIn: true
             };
-            // const result = await fetch('/user/newuser', {
-            //     method: 'POST',
-            //     body: JSON.stringify({
-            //         email: email,
-            //         password: password,
-            //     })
-            // });
             dispatch(login(user));
         } else alert('Foute credentials');
     };
