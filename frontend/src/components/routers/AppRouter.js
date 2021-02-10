@@ -16,25 +16,25 @@ function AppRouter() {
     return (
         <div>
             <Switch>
-                <Route path="/book1">
+                <Route exact path="/book1">
                     <Book1 />
                 </Route>
-                <Route path="/book2">
+                <Route exact path="/book2">
                     <Book2 />
                 </Route>
-                <Route path="/book3">
+                <Route exact path="/book3">
                     <Book3 />
                 </Route>
-                <Route path="/book4">
+                <Route exact path="/book4">
                     <Book4 />
                 </Route>
-                <Route path="/story">
+                <Route exact path="/story">
                     <Story />
                 </Route>
-                <Route path="/singup">
+                <Route exact path="/createaccount">
                     <SignUp />
                 </Route>
-                <Route path="/library">
+                <Route exact path="/library">
                     <Library />
                 </Route>
                 <Route exact path="/">

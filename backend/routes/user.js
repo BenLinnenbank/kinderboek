@@ -30,12 +30,11 @@ router.get('/users', async (req, res) => {
 router.post('/newuser', async (req, res) => {
     const { email, password } = req.body;
     try {
-        let user = await User.find({ email: email }).exec();
-        if (!Array.isArray(user)) throw new Error('Did not receive an array')
-        if (user.length > 0) return res.status(409).json({ message: 'User already exists' });
+        let user = await User.findOne({ email: email }).exec();
+        if (user) return res.status(409).json({ message: 'User already exists' });
         user = await User.create({ email, password });
         console.log(user);
-        res.json(user);
+        return res.status(200).json({email: user.email});
     } catch (err) {
         console.log(err.message);
         res.status(500).send('Internal server error');

@@ -9,14 +9,19 @@ function App() {
 
   let history = useHistory()
   const isUserLoggedIn = useSelector(state => state.loggedInUser.loggedIn);
+  const createAccount = useSelector(state => state.createAccount);
+  console.log('this is the redux create account state variablie: ', createAccount);
 
   useEffect(() => {
     if (isUserLoggedIn) {
-      history.push('/library')
+      history.push('/library');
     } else {
-      history.push('/')
+      if (createAccount) {
+        return history.push('/createaccount');
+      }
+      history.push('/');
     }
-  }, [isUserLoggedIn, history]);
+  }, [isUserLoggedIn, createAccount, history]);
 
   return (
     <AppContainer>

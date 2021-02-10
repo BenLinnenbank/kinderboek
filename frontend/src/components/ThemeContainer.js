@@ -10,7 +10,7 @@ const ThemeContainer = ({ children }) => {
         <>
             <ThemeProvider theme={currentTheme ? lightTheme : darkTheme}>
                 {children}
-            </ThemeProvider> :
+            </ThemeProvider>
         </>
     );
 };
