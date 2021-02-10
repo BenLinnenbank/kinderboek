@@ -10,3 +10,9 @@ export const toggleTheme = () => {
         type: 'TOGGLE_THEME',
     }
 }
+
+export const createAccount = () => {
+    return {
+        type: 'CREATE_ACCOUNT',
+    }
+}

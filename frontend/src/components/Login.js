@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { login } from '../0-actions/index';
+import { login, createAccount } from '../0-actions/index';
 
 
 const StyledForm = styled.form`
@@ -49,6 +49,10 @@ const Login = () => {
         console.log(email, password);
         const result = await fetch('/api/user/login', {
             method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify({
                 email: email,
                 password: password,
