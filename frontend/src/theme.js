@@ -8,6 +8,7 @@ export const lightTheme = {
         },
         text: {
             primary: '#352F2F',
+            brand: '#FC7E5B',
             secondary: '#3C78D8',
             tertiary: '#A3A6B4',
             button: '#352F2F',

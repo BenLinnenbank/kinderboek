@@ -14,7 +14,7 @@ const StyledMenu = styled.menu`
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    height: 80px;
+    height: 62px;
     padding: 12px;
     margin: 0px;
 `;
