@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
-import LoginForm from './LoginForm'
-import LoginMenu from './LoginMenu'
-import loginbg from '../assets/images/loginbg.svg'
+import LoginForm from './LoginForm';
+import SignUpForm from './SignUpForm';
+import LoginMenu from './LoginMenu';
+import loginbg from '../assets/images/loginbg.svg';
+import { useSelector } from 'react-redux';
 
 const LoginContainer = styled.div`
   height: 100vh;
@@ -13,11 +15,19 @@ const LoginContainer = styled.div`
   align-items: center;
 `
 
-export default function Login() {
+const Login = () => {
+  const signupMenu = useSelector(state => state.createAccount);
+
   return (
     <LoginContainer>
       <LoginMenu />
-      <LoginForm />
+      {
+        signupMenu ? 
+          (<SignUpForm />) : 
+          (<LoginForm />)
+      }
     </LoginContainer>
-  )
+  );
 }
+
+export default Login;

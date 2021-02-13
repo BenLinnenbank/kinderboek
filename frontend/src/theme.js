@@ -24,7 +24,7 @@ export const lightTheme = {
         h2: '32px',
         body: '16px',
     }
-}
+};
 
 export const darkTheme = {
     colors: {
@@ -51,4 +51,4 @@ export const darkTheme = {
         h2: '32px',
         body: '16px',
     }
-}
+};

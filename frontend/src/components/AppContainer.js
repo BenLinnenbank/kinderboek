@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledContainer = styled.div`
@@ -7,12 +7,12 @@ const StyledContainer = styled.div`
     background-color: ${props => props.theme.colors.background.primary};
 `;
 
-function AppContainer({ children }) {
+const AppContainer = ({ children }) => {
     return (
         <StyledContainer>
             {children}
         </StyledContainer>
-    )
+    );
 }
 
-export default AppContainer
+export default AppContainer;

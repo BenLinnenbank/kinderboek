@@ -1,12 +1,12 @@
-import React from 'react'
-import profilePicture from '../../../assets/images/avatarPlaceholder.png'
+import React from 'react';
+import profilePicture from '../../../assets/images/avatarPlaceholder.png';
 
-function ProfileButton(props) {
+const ProfileButton = () => {
     return (
         <>
             <img src={profilePicture} alt="User profile" />
         </>
-    )
+    );
 }
 
-export default ProfileButton
+export default ProfileButton;

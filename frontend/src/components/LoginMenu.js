@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import logo from '../assets/images/logo.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { createAccount } from '../0-actions/index';
-import { useHistory } from 'react-router-dom';
 
 
 const StyledMenu = styled.menu`
@@ -26,25 +25,25 @@ const StyledSettingsMenu = styled.menu`
     align-items: center;
 `;
 
-const InlineCTA = styled.a`
+const InlineCTA = styled.button`
     margin-left: 4px;
     color: ${props => props.theme.colors.text.brand};
     font-weight: bold;
     height: 16px;
-`
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+`;
 
-const LoginMenu = (props) => {
+const LoginMenu = () => {
 
-    let history = useHistory()
     const dispatch = useDispatch()
     const signupMenu = useSelector(state => state.createAccount)
     console.log(signupMenu);
 
     const toggleSignup = () => {
         dispatch(createAccount());
-        signupMenu ?
-            history.push('/createaccount') :
-            history.push('/')
     }
 
     return (
@@ -57,11 +56,11 @@ const LoginMenu = (props) => {
                     ?
                     (<InlineCTA onClick={() => toggleSignup()}> Back to login</InlineCTA>)
                     :
-                    (<><p>Don't have an account?</p><InlineCTA onClick={() => toggleSignup()}>Create account</InlineCTA></>)
+                    (<><p>Don't have an account yet?</p><InlineCTA onClick={() => toggleSignup()}>Create account</InlineCTA></>)
                 }
             </StyledSettingsMenu>
         </StyledMenu>
     );
 }
 
-export default LoginMenu
+export default LoginMenu;

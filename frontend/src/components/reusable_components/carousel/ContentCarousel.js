@@ -26,7 +26,7 @@ const StyledH3 = styled.h3`
     color: ${props => props.theme.colors.text.primary};
 `;
 
-function ContentCarousel(props) {
+const ContentCarousel = (props) => {
     const flickityOptions = {
         wrapAround: true,
         pageDots: false,
@@ -54,7 +54,7 @@ function ContentCarousel(props) {
                 })}
             </Flickity>
         </StyledContainer>
-    )
+    );
 }
 
-export default ContentCarousel
+export default ContentCarousel;

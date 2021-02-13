@@ -4,7 +4,7 @@ import ContentCarousel from './reusable_components/carousel/ContentCarousel';
 import { bookCovers } from '../assets/bookCovers/bookCovers';
 
 
-function Library() {
+const Library = () => {
 
     return (
         <>
@@ -12,7 +12,7 @@ function Library() {
             <ContentCarousel title={"Nieuwste boeken"} books={bookCovers} />
             <ContentCarousel title={"Laatst bekeken"} books={bookCovers} />
         </>
-    )
+    );
 }
 
-export default Library
+export default Library;

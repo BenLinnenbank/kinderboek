@@ -7,7 +7,7 @@ import old from '../assets/images/old.svg';
 import logo from '../assets/images/logo.svg';
 import ProfileButton from './reusable_components/buttons/ProfileButton';
 import { useDispatch } from 'react-redux';
-import { toggleTheme } from '../0-actions/index.js'
+import { toggleTheme } from '../0-actions/index.js';
 
 
 const StyledMenu = styled.menu`
@@ -58,4 +58,4 @@ const Menu = (props) => {
     );
 }
 
-export default Menu
+export default Menu;

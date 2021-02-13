@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-function Book2() {
+const Book2 = () => {
     return (
         <div>
             <h1>book 2</h1>
         </div>
-    )
+    );
 }
 
-export default Book2
+export default Book2;
 

@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../theme.js";
 
 const ThemeContainer = ({ children }) => {
+    
     const currentTheme = useSelector(state => state.theme);
 
     return (

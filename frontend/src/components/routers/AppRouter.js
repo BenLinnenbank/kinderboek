@@ -10,7 +10,7 @@ import Book4 from '../books/Book4';
 import Story from '../Story';
 import Library from '../Library';
 import Login from '../Login';
-import SignUp from '../SignUp';
+import SignUpForm from '../SignUpForm';
 
 function AppRouter() {
     return (
@@ -30,9 +30,6 @@ function AppRouter() {
                 </Route>
                 <Route exact path="/story">
                     <Story />
-                </Route>
-                <Route exact path="/createaccount">
-                    <SignUp />
                 </Route>
                 <Route exact path="/library">
                     <Library />

@@ -5,7 +5,7 @@ const StyledMenuIcon = styled.img`
     margin-right: 8px;
 `;
 
-function MenuIcon(props) {
+const MenuIcon = (props) => {
     return (
         <StyledMenuIcon src={props.icon} />
     );

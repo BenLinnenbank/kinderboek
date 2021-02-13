@@ -15,7 +15,7 @@ const StyledMenuButton = styled.button`
         border-radius: 25px;
     `;
 
-function MenuButton(props) {
+const MenuButton = (props) => {
     return (
         <StyledMenuButton color={props.color}>
             <MenuIcon icon={props.icon} />

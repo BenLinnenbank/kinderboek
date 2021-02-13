@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Book4() {
+const Book4 = () => {
     return (
         <div>
             <h1>book 4</h1>
         </div>
-    )
+    );
 }
 
-export default Book4
+export default Book4;

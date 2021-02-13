@@ -8,7 +8,7 @@ const StyledButtonText = styled.span`
         color: ${props => props.theme.colors.text.button}
     `;
 
-function ButtonText(props) {
+const ButtonText = (props) => {
     return (
         <StyledButtonText>
             {props.text}
