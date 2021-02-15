@@ -13,6 +13,7 @@ const StyledForm = styled.form`
     border-radius: 12px;
     border: 2px solid rgba(252, 126, 91, 0.25);
     box-shadow: 2px 4px 10px rgba(202, 200, 200, 0.25);
+    z-index: 3;
 `;
 
 const Form = ({...props}) => {
