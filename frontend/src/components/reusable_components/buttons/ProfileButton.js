@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import profilePicture from '../../../assets/images/avatarPlaceholder.png';
+import SettingsMenu from '../../SettingsMenu';
 
 
 const StyledProfileButton = styled.button`
@@ -14,9 +15,17 @@ const StyledProfileButton = styled.button`
 `;
 
 const ProfileButton = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    }
+
     return (
-        <StyledProfileButton>
+        <StyledProfileButton onClick={() => toggleMenu()}>
             <img src={profilePicture} alt="User profile" />
+            <SettingsMenu isOpen={isOpen} />
         </ StyledProfileButton>
     );
 }

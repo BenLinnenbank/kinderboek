@@ -1,7 +1,7 @@
 export const lightTheme = {
     colors: {
         background: {
-            primary: 'linear-gradient(-225deg, #D7FFFE 0%, #FFFEFF 100%)',
+            primary: 'linear-gradient(180deg, #FFF6F1 0%, #FFF2EE 100%)',
             secondary: '#3F3F3F',
             tertiary: '#A3A0FB',
             quartary: '#E9E9F0',
