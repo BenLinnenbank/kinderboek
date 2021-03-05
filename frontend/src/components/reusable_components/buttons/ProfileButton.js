@@ -16,6 +16,7 @@ const StyledProfileButton = styled.button`
 
 const ProfileButton = () => {
 
+    
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -23,10 +24,12 @@ const ProfileButton = () => {
     }
 
     return (
+        <>
         <StyledProfileButton onClick={() => toggleMenu()}>
             <img src={profilePicture} alt="User profile" />
-            <SettingsMenu isOpen={isOpen} />
         </ StyledProfileButton>
+        <SettingsMenu isOpen={isOpen} />
+        </>
     );
 }
 

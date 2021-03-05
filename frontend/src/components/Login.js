@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 const LoginContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: #F0F8FF;
+  background: conic-gradient(from .5turn at bottom center, #F9FAFB, #EFF6FF);
   display: flex;
   flex-direction: column;
   align-items: center;

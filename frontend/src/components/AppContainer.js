@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledContainer = styled.div`
     width: 100%;
     height: 100%;
-    background: ${props => props.theme.colors.background.primary};
+    background-color: ${props => props.theme.colors.background.primary};
 `;
 
 const AppContainer = ({ children }) => {

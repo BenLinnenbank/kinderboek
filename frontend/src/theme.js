@@ -1,8 +1,8 @@
 export const lightTheme = {
     colors: {
         background: {
-            primary: 'linear-gradient(180deg, #FFF6F1 0%, #FFF2EE 100%)',
-            secondary: '#3F3F3F',
+            primary: '#F2F2F2',
+            secondary: '#F9FAFB',
             tertiary: '#A3A0FB',
             quartary: '#E9E9F0',
         },
@@ -29,7 +29,7 @@ export const lightTheme = {
 export const darkTheme = {
     colors: {
         background: {
-            primary: 'linear-gradient(315deg, #2d3436 0%, #000000 74%)',
+            primary: '#1E1E1E',
             secondary: '#3F3F3F',
             tertiary: '#A3A0FB',
             quartary: '#E9E9F0',
